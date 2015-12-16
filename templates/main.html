@@ -1,0 +1,25 @@
+<ion-view>
+  <ion-pane>
+    <ion-header-bar class="bar item-input-inset">
+      <label class="item item-input-wrapper item-light item-select">
+        <div class="input-label">Status</div>
+        <select ng-model="status" ng-init="status='attackdamage'", ng-change="statusChange()">
+          <option value="attackdamage" selected>AD</option>
+          <option value="armor">AR</option>
+          <option value="attackspeed">AS</option>
+          <option value="crit">Crit</option>
+          <option value="hp">HP</option>
+          <option value="mp">MP</option>
+          <option value="spellblock">MR</option>
+          <option value="movespeed">MS</option>
+        </select>
+      </label>
+    </ion-header-bar>
+    <ion-content scroll="true" id="content"></ion-content>
+    <ion-footer-bar class="item-input-inset">
+      <button class="button button-light icon ion-minus" ng-click="decrement()"></button>
+      <h3 class="title">{{level}}</h3>
+      <button class="button button-light icon ion-plus" ng-click="increment()"></button>
+    </ion-footer-bar>
+  </ion-pane>
+</ion-view>
